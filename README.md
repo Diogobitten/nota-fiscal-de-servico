@@ -1,6 +1,8 @@
 # Saguicontrol - Emissão de Notas Fiscais
-
 Sistema para emissão de Nota Fiscal de Serviço (NFS-e), desenvolvido com **HTML**, **CSS**, e **JavaScript**.
+
+## Acesse o site clicando no link abaixo:
+💻 https://nota-fiscal-de-servico-cewqcgqom-diogobittens-projects.vercel.app/
 
 ## Funcionalidades
 
@@ -33,3 +35,4 @@ Sistema para emissão de Nota Fiscal de Serviço (NFS-e), desenvolvido com **HTM
    git clone https://github.com/Diogobitten/nota-fiscal-de-servico.git
    cd nota-fiscal-de-servico
    
+2. Clique no index.html para abrir a página   
