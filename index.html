@@ -1,1 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SaguiControl</title>
 
+  <link rel="icon" href="./image/ico.jpeg" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+
+</head>
+<body class="bg-light">
+  <header>
+    <img src="./image/logo1.png" alt="Logo do Sistema">
+  </header>  
+  <div class="container mt-5">
+    <h2 class="text-center mb-4">Emissão de Nota Fiscal de Serviço</h2>
+    <div class="card shadow p-4">
+      <form id="nfsForm">
+        <div class="mb-3">
+          <label for="valorVenda" class="form-label">Valor da Venda:</label>
+          <input type="number" class="form-control" id="valorVenda" required>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="irpf" class="form-label">Porcentagem do IRPF (%):</label>
+            <input type="number" class="form-control" id="irpf" required>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="pis" class="form-label">Porcentagem do PIS (%):</label>
+            <input type="number" class="form-control" id="pis" required>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="cofins" class="form-label">Porcentagem do COFINS (%):</label>
+            <input type="number" class="form-control" id="cofins" required>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="inss" class="form-label">Porcentagem do INSS (%):</label>
+            <input type="number" class="form-control" id="inss" required>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="issqn" class="form-label">Porcentagem do ISSQN (%):</label>
+          <input type="number" class="form-control" id="issqn" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="itens" class="form-label">Itens Vendidos:</label>
+          <textarea class="form-control" id="itens" rows="3" required></textarea>
+        </div>
+
+        <button type="button" class="btn btn-primary w-100" onclick="calcularNotaFiscal()">Gerar Nota Fiscal</button>
+      </form>
+    </div>
+
+    <div class="card shadow mt-4 p-4 bg-white" id="notaFiscalResultado" style="display: none;">
+      <h3 class="text-center">Nota Fiscal de Serviço</h3>
+      <div id="notaFiscalDados"></div>
+      <div class="btn-group">
+        <button class="btn btn-outline-success" onclick="exportarExcel()">Exportar para Excel</button>
+        <button class="btn btn-outline-success" onclick="exportarXML()">Exportar para XML</button>
+      </div>
+    </div>
+  </div>
+
+<footer>&copy; 2025 Saguitech - Nota Fiscal de Serviço - Desenvolvido por Diogo Bittencourt</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
